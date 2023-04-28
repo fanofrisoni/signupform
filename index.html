@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
@@ -21,22 +22,32 @@
     <img src="img/wallpaper.jpg" alt="wallpaper">
   </aside>
   <main>
+    <div class="info" id="info">
+      <p>This is not a real online service!</p><br>
+      <p>Project by: Stefano Frisoni</p><br>
+      <p>The Odin Project</p>
+    </div>
     <form action="" method="post">
-      <div class="stripform"></div>
-      <h2>sign-up</h2>
+      <div class="stripform">
+        <div class="buttons">
+          <button type="submit">create account</button>
+          <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+      </div>
+      <h2>sign up</h2>
         <div class="fieldname">
           <div class="fname">
-            <label for="first-name">FIRST NAME</label><br>
-            <input type="text" name="first-name" id="first-name" placeholder="Fano" required>
+            <label for="first-name">FIRST NAME *</label><br>
+            <input type="text" name="first-name" id="first-name" placeholder="Fano" minlength="2" required autofocus>
           </div>
           <div class="fname">
-            <label for="last-name">LAST NAME</label><br>
-            <input type="text" name="last-name" id="last-name" placeholder="Frisoni" required>
+            <label for="last-name">LAST NAME *</label><br>
+            <input type="text" name="last-name" id="last-name" minlength="2" placeholder="Frisoni" required>
           </div>
         </div>
         <div class="fieldname">
           <div class="fname">
-            <label for="email">EMAIL</label><br>
+            <label for="email">EMAIL *</label><br>
             <input type="email" name="email" id="email" placeholder="you@example.com" required>
           </div>
           <div class="fname">
@@ -44,6 +55,18 @@
             <input type="tel" name="tel" id="tel" placeholder="+1 614-169-4297">
           </div>
         </div>
+        <div class="fieldname">
+          <div class="fname">
+            <label for="password">PASSWORD</label><br>
+            <input type="password" name="password" id="password" placeholder="dog123" required><br>
+            <label id="errorpassword" for="password">* passwords don't match</label>
+          </div>
+          <div class="fname">
+            <label for="cpassword">CONFIRM PASSWORD</label><br>
+            <input type="password" name="cpassword" id="cpassword" placeholder="dog123" required>
+          </div>
+        </div>
+        
     </form>
   </main>
   <footer></footer>
