@@ -192,3 +192,15 @@ form {
   font-size: 1rem;
   line-height: 2.2vh;
 }
+
+.buttons > button:hover {
+  transition: .01s ease-in-out;
+  transform: scale(1.02);
+  box-shadow:  -10px 10px 40px #6d6d8f,
+             10px -10px 40px #9696c9;
+}
+
+.buttons > button:active {
+  transition: .01s ease-in-out;
+  transform: scale(.98);
+}

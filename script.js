@@ -1,8 +1,19 @@
 let label = document.getElementById("errorpassword");
 let psswdbox = document.getElementById('password')
 let cpsswdbox = document.getElementById('cpassword')
-  console.log(psswdbox.value)
-  console.log(cpsswdbox.value)  
+let signup = document.getElementById('signupform')
+
+
+signup.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  if(psswdbox.value==cpsswdbox.value){
+    alert('Thanks!')
+    signup.reset();
+  } else {
+    label.style.color = '#ff3363';
+  }
+  
+})
 
 cpsswdbox.addEventListener('input', ()=>{
   if(psswdbox.value==cpsswdbox.value){
